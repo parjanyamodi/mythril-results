@@ -1,0 +1,25 @@
+{"error": null, "issues": [{"address": 276, "code": "msg.sender.send(amountToWithdraw)", "contract": "SendBack", "description": "The return value of a message call is not checked.\nExternal calls return a boolean value. If the callee halts with an exception, 'false' is returned and execution continues in the caller. The caller should check whether an exception happened and react accordingly to avoid unexpected behavior. For example it is often desirable to wrap external calls in require() so the transaction is reverted if the call fails.", "filename": "./mishandled.sol", "function": "withdrawBalance()", "lineno": 14, "max_gas_used": 61579, "min_gas_used": 6918, "severity": "Medium", "sourceMap": "407:33", "swc-id": "104", "title": "Unchecked return value from external call.", "tx_sequence": {"initialState": {"accounts": {"0xaffeaffeaffeaffeaffeaffeaffeaffeaffeaffe": {"balance": "0x8000000000000", "code": "", "nonce": 0, "storage": "{}"}, "0xdeadbeefdeadbeefdeadbeefdeadbeefdeadbeef": {"balance": "0x0", "code": "", "nonce": 0, "storage": "{}"}}}, "steps": [{"address": "", "calldata": "", "input": "0x6080604052348015600f57600080fd5b506101498061001f6000396000f300608060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680635fd8c71014610046575b600080fd5b34801561005257600080fd5b5061005b61005d565b005b60008060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054905060008060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020819055503373ffffffffffffffffffffffffffffffffffffffff166108fc829081150290604051600060405180830381858888f1935050505050505600a165627a7a72305820d54be92f9245310942dbf1f80167daa34877e9a0c910af903b6707e6bb20bade0029", "name": "unknown", "origin": "0xaffeaffeaffeaffeaffeaffeaffeaffeaffeaffe", "value": "0x0"}, {"address": "0x901d12ebe1b195e5aa8748e62bd7734ae19b51f", "calldata": "0x5fd8c710", "input": "0x5fd8c710", "name": "withdrawBalance()", "origin": "0xaffeaffeaffeaffeaffeaffeaffeaffeaffeaffe", "resolved_input": null, "value": "0x0"}, {"address": "0x901d12ebe1b195e5aa8748e62bd7734ae19b51f", "calldata": "0x5fd8c710", "input": "0x5fd8c710", "name": "withdrawBalance()", "origin": "0xdeadbeefdeadbeefdeadbeefdeadbeefdeadbeef", "resolved_input": null, "value": "0x0"}]}}], "success": true}
+Command exited with non-zero status 1
+	Command being timed: "myth a ./mishandled.sol --parallel-solving --execution-timeout 600 -o json"
+	User time (seconds): 6.81
+	System time (seconds): 0.50
+	Percent of CPU this job got: 109%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:06.68
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 148608
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 29664
+	Voluntary context switches: 215
+	Involuntary context switches: 58615
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 24
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
