@@ -50,7 +50,7 @@ const cleanUp = (str, dir, fileName) => {
     // var data = JSON.parse(mapped)
     // data.custom = remaining
 
-    console.log(data)
+    // console.log(data)
     writeUp(data, dir, fileName)
     console.log("Done")
 }
