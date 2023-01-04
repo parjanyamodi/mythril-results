@@ -30,7 +30,7 @@ const parseIt = (file) => {
 
 const writeUp = (data, dir, fileName) => {
     fs.mkdirSync(`./cleaned/${dir}`, {recursive: true})
-    fs.writeFileSync(`./cleaned/${dir}/${fileName}`, JSON.stringify(data), 'utf-8')
+    fs.writeFileSync(`./cleaned/${dir}/${fileName}`, JSON.stringify(data, null, 4), 'utf-8')
 }
 
 
