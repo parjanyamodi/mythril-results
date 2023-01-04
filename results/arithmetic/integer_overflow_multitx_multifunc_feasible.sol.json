@@ -1,0 +1,25 @@
+{"error": null, "issues": [{"address": 218, "code": "count -= input", "contract": "IntegerOverflowMultiTxMultiFuncFeasible", "description": "The arithmetic operator can underflow.\nIt is possible to cause an integer overflow or underflow in the arithmetic operation. ", "filename": "./integer_overflow_multitx_multifunc_feasible.sol", "function": "run(uint256)", "lineno": 25, "max_gas_used": 26968, "min_gas_used": 6873, "severity": "High", "sourceMap": ":14", "swc-id": "101", "title": "Integer Arithmetic Bugs", "tx_sequence": {"initialState": {"accounts": {"0xaffeaffeaffeaffeaffeaffeaffeaffeaffeaffe": {"balance": "0x1", "code": "", "nonce": 0, "storage": "{}"}, "0xdeadbeefdeadbeefdeadbeefdeadbeefdeadbeef": {"balance": "0x100", "code": "", "nonce": 0, "storage": "{}"}}}, "steps": [{"address": "", "calldata": "", "input": "0x6080604052600080556001805534801561001857600080fd5b5061011b806100286000396000f3006080604052600436106053576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806306661abd146058578063a444f5e9146080578063e1c7392a1460aa575b600080fd5b348015606357600080fd5b50606a60be565b6040518082815260200191505060405180910390f35b348015608b57600080fd5b5060a86004803603810190808035906020019092919050505060c4565b005b34801560b557600080fd5b5060bc60e5565b005b60015481565b60008054141560d15760e2565b806001600082825403925050819055505b50565b60016000819055505600a165627a7a723058203c10308e6742990fb0b2e8a0cb661e32bcb8e9512bdb2767e77e1023955d5e5d0029", "name": "unknown", "origin": "0xaffeaffeaffeaffeaffeaffeaffeaffeaffeaffe", "value": "0x0"}, {"address": "0x901d12ebe1b195e5aa8748e62bd7734ae19b51f", "calldata": "0xe1c7392a", "input": "0xe1c7392a", "name": "init()", "origin": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "resolved_input": null, "value": "0x0"}, {"address": "0x901d12ebe1b195e5aa8748e62bd7734ae19b51f", "calldata": "0xa444f5e901", "input": "0xa444f5e901", "name": "run(uint256)", "origin": "0xdeadbeefdeadbeefdeadbeefdeadbeefdeadbeef", "resolved_input": [452312848583266388373324160190187140051835877600158453279131187530910662656], "value": "0x0"}]}}], "success": true}
+Command exited with non-zero status 1
+	Command being timed: "myth a ./integer_overflow_multitx_multifunc_feasible.sol --parallel-solving --execution-timeout 600 -o json"
+	User time (seconds): 6.75
+	System time (seconds): 0.45
+	Percent of CPU this job got: 106%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:06.74
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 146076
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 29067
+	Voluntary context switches: 449
+	Involuntary context switches: 87585
+	Swaps: 0
+	File system inputs: 40
+	File system outputs: 24
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1

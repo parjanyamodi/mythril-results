@@ -1,0 +1,25 @@
+{"error": null, "issues": [{"address": 174, "code": "count *= input", "contract": "IntegerOverflowMul", "description": "The arithmetic operator can overflow.\nIt is possible to cause an integer overflow or underflow in the arithmetic operation. ", "filename": "./integer_overflow_mul.sol", "function": "run(uint256)", "lineno": 17, "max_gas_used": 26143, "min_gas_used": 6048, "severity": "High", "sourceMap": ":14", "swc-id": "101", "title": "Integer Arithmetic Bugs", "tx_sequence": {"initialState": {"accounts": {"0xaffeaffeaffeaffeaffeaffeaffeaffeaffeaffe": {"balance": "0x0", "code": "", "nonce": 0, "storage": "{}"}, "0xdeadbeefdeadbeefdeadbeefdeadbeefdeadbeef": {"balance": "0x0", "code": "", "nonce": 0, "storage": "{}"}}}, "steps": [{"address": "", "calldata": "", "input": "0x6080604052600260005534801561001557600080fd5b5060e4806100246000396000f3006080604052600436106049576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806306661abd14604e578063a444f5e9146076575b600080fd5b348015605957600080fd5b50606060a0565b6040518082815260200191505060405180910390f35b348015608157600080fd5b50609e6004803603810190808035906020019092919050505060a6565b005b60005481565b806000808282540292505081905550505600a165627a7a72305820ad1816da0ffeb277d932752c0426e4570b2dba8c7e757ae07c8416b2e55773ff0029", "name": "unknown", "origin": "0xaffeaffeaffeaffeaffeaffeaffeaffeaffeaffe", "value": "0x0"}, {"address": "0x901d12ebe1b195e5aa8748e62bd7734ae19b51f", "calldata": "0xa444f5e980", "input": "0xa444f5e980", "name": "run(uint256)", "origin": "0xaffeaffeaffeaffeaffeaffeaffeaffeaffeaffe", "resolved_input": [57896044618658097711785492504343953926634992332820282019728792003956564819968], "value": "0x0"}]}}], "success": true}
+Command exited with non-zero status 1
+	Command being timed: "myth a ./integer_overflow_mul.sol --parallel-solving --execution-timeout 600 -o json"
+	User time (seconds): 8.08
+	System time (seconds): 0.43
+	Percent of CPU this job got: 105%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:08.05
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 139668
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 27286
+	Voluntary context switches: 406
+	Involuntary context switches: 163274
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 24
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1

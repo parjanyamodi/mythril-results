@@ -1,0 +1,25 @@
+{"error": null, "issues": [{"address": 144, "code": "sellerBalance += value", "contract": "Overflow", "description": "The arithmetic operator can overflow.\nIt is possible to cause an integer overflow or underflow in the arithmetic operation. ", "filename": "./integer_overflow_1.sol", "function": "add(uint256)", "lineno": 14, "max_gas_used": 26476, "min_gas_used": 6100, "severity": "High", "sourceMap": ":22", "swc-id": "101", "title": "Integer Arithmetic Bugs", "tx_sequence": {"initialState": {"accounts": {"0xaffeaffeaffeaffeaffeaffeaffeaffeaffeaffe": {"balance": "0x21c10c04020fafb9", "code": "", "nonce": 0, "storage": "{}"}, "0xdeadbeefdeadbeefdeadbeefdeadbeefdeadbeef": {"balance": "0x0", "code": "", "nonce": 0, "storage": "{}"}}}, "steps": [{"address": "", "calldata": "", "input": "0x60806040526000805534801561001457600080fd5b5060c8806100236000396000f300608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680631003e2d2146044575b600080fd5b348015604f57600080fd5b50606c600480360381019080803590602001909291905050506086565b604051808215151515815260200191505060405180910390f35b60008160008082825401925050819055509190505600a165627a7a723058206ee31193cf668f2339b84a54e1069cd8507aa9c0e22c32005cdcc4c2c6a793690029", "name": "unknown", "origin": "0xaffeaffeaffeaffeaffeaffeaffeaffeaffeaffe", "value": "0x0"}, {"address": "0x901d12ebe1b195e5aa8748e62bd7734ae19b51f", "calldata": "0x1003e2d2c0", "input": "0x1003e2d2c0", "name": "add(uint256)", "origin": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "resolved_input": [86844066927987146567678238756515930889952488499230423029593188005934847229952], "value": "0x0"}, {"address": "0x901d12ebe1b195e5aa8748e62bd7734ae19b51f", "calldata": "0x1003e2d250", "input": "0x1003e2d250", "name": "add(uint256)", "origin": "0xdeadbeefdeadbeefdeadbeefdeadbeefdeadbeef", "resolved_input": [36185027886661311069865932815214971204146870208012676262330495002472853012480], "value": "0x0"}]}}], "success": true}
+Command exited with non-zero status 1
+	Command being timed: "myth a ./integer_overflow_1.sol --parallel-solving --execution-timeout 600 -o json"
+	User time (seconds): 7.73
+	System time (seconds): 0.32
+	Percent of CPU this job got: 104%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:07.73
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 147404
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 29319
+	Voluntary context switches: 440
+	Involuntary context switches: 125858
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 24
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1

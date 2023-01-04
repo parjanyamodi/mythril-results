@@ -1,0 +1,24 @@
+{"success": false, "error": "Solc experienced a fatal error.\n\n./parity_wallet_bug_1.sol:267:13: DeclarationError: Identifier not found.\n      jumpi(invalidJumpLabel, iszero(extcodesize(o_addr)))\n            ^--------------^\n", "issues": []}
+	Command being timed: "myth a ./parity_wallet_bug_1.sol --parallel-solving --execution-timeout 600 -o json"
+	User time (seconds): 2.67
+	System time (seconds): 0.41
+	Percent of CPU this job got: 115%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.67
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 112068
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 22662
+	Voluntary context switches: 24
+	Involuntary context switches: 156711
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 24
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

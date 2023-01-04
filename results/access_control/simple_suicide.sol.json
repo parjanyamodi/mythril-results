@@ -1,0 +1,25 @@
+{"error": null, "issues": [{"address": 112, "code": "selfdestruct(msg.sender)", "contract": "SimpleSuicide", "description": "Any sender can cause the contract to self-destruct.\nAny sender can trigger execution of the SELFDESTRUCT instruction to destroy this contract account and withdraw its balance to an arbitrary address. Review the transaction trace generated for this issue and make sure that appropriate security controls are in place to prevent unrestricted access.", "filename": "./simple_suicide.sol", "function": "sudicideAnyone()", "lineno": 13, "max_gas_used": 227, "min_gas_used": 132, "severity": "High", "sourceMap": "333:24", "swc-id": "106", "title": "Unprotected Selfdestruct", "tx_sequence": {"initialState": {"accounts": {"0xaffeaffeaffeaffeaffeaffeaffeaffeaffeaffe": {"balance": "0x1", "code": "", "nonce": 0, "storage": "{}"}, "0xdeadbeefdeadbeefdeadbeefdeadbeefdeadbeef": {"balance": "0x1", "code": "", "nonce": 0, "storage": "{}"}}}, "steps": [{"address": "", "calldata": "", "input": "0x6080604052348015600f57600080fd5b50609d8061001e6000396000f300608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063a56a3b5a146044575b600080fd5b348015604f57600080fd5b5060566058565b005b3373ffffffffffffffffffffffffffffffffffffffff16ff00a165627a7a7230582014e68381251fadc716f6e24bc6ed136f52443df06653d91ef0d95bf3241d7d180029", "name": "unknown", "origin": "0xaffeaffeaffeaffeaffeaffeaffeaffeaffeaffe", "value": "0x0"}, {"address": "0x901d12ebe1b195e5aa8748e62bd7734ae19b51f", "calldata": "0xa56a3b5a", "input": "0xa56a3b5a", "name": "sudicideAnyone()", "origin": "0xdeadbeefdeadbeefdeadbeefdeadbeefdeadbeef", "resolved_input": null, "value": "0x0"}]}}], "success": true}
+Command exited with non-zero status 1
+	Command being timed: "myth a ./simple_suicide.sol --parallel-solving --execution-timeout 600 -o json"
+	User time (seconds): 4.28
+	System time (seconds): 0.32
+	Percent of CPU this job got: 107%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:04.27
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 134292
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 25987
+	Voluntary context switches: 157
+	Involuntary context switches: 50434
+	Swaps: 0
+	File system inputs: 8
+	File system outputs: 88
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
