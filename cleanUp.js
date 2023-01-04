@@ -36,11 +36,24 @@ const writeUp = (data, dir, fileName) => {
 
 const cleanUp = (str, dir, fileName) => {
     var file = getFile(str)
+    if (file === undefined || file === null || file === "") {
+        console.log("File not found")
+        return
+    }
     console.log(dir, fileName)
     const data = parseIt(file)
-    console.log(data)
+
+    // Replace this
+    // var unmapped = file.lastIndexOf('}')
+    // var mapped = file.slice(0, unmapped + 1)
+    // var remaining = file.slice(unmapped + 1)
+    // var data = JSON.parse(mapped)
+    // data.custom = remaining
+
+    // console.log(data)
     writeUp(data, dir, fileName)
     console.log("Done")
 }
 
-cleanUp('/Users/vijayeshjeevan/Desktop/PP1/mythril-results/example.json', 'generic', 'example.json')
+// cleanUp('/Users/vijayeshjeevan/Desktop/PP1/mythril-results/example.json', 'generic', 'example.json')
+module.exports = cleanUp
