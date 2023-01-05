@@ -40,8 +40,12 @@ const cleanUp = (str, dir, fileName) => {
         console.log("File not found")
         return
     }
-    console.log(dir, fileName)
+    // console.log(dir, fileName)
     const data = parseIt(file)
+
+    // if(data.issues.length === 0) {
+    //     console.log(data)
+    // }
 
     // Replace this
     // var unmapped = file.lastIndexOf('}')
@@ -52,7 +56,8 @@ const cleanUp = (str, dir, fileName) => {
 
     // console.log(data)
     writeUp(data, dir, fileName)
-    console.log("Done")
+    // console.log("Done")
+    return data
 }
 
 // cleanUp('/Users/vijayeshjeevan/Desktop/PP1/mythril-results/example.json', 'generic', 'example.json')
