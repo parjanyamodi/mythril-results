@@ -1,0 +1,41 @@
+WARNING:root:You are using evm version 1.8.2. The supported version is 1.7.3
+WARNING:root:You are using solc version 0.4.21, The latest supported version is 0.4.19
+INFO:root:contract /oyente/smartbugs-curated/dataset/short_addresses/short_address_example.sol:MyToken:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 99.7%
+INFO:symExec:	  Integer Underflow: 			 False
+INFO:symExec:	  Integer Overflow: 			 True
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:/oyente/smartbugs-curated/dataset/short_addresses/short_address_example.sol:21:10: Warning: Integer Overflow.
+         balances[to] += amount
+Integer Overflow occurs if:
+    balances[to] = 85653202831209899131921273706816539903532775246499202405936884825549521553152
+    balances[msg.sender] = 44369063854674067291029404066660873444229566625561754964912869797988903417852
+INFO:symExec:	====== Analysis Completed ======
+	Command being timed: "python2 /oyente/oyente/oyente.py -s /oyente/smartbugs-curated/dataset/short_addresses/short_address_example.sol"
+	User time (seconds): 1.40
+	System time (seconds): 0.13
+	Percent of CPU this job got: 83%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.84
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 59348
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 4
+	Minor (reclaiming a frame) page faults: 33195
+	Voluntary context switches: 694
+	Involuntary context switches: 706
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 152
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

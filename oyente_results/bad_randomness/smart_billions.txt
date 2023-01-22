@@ -1,0 +1,83 @@
+WARNING:root:You are using evm version 1.8.2. The supported version is 1.7.3
+WARNING:root:You are using solc version 0.4.21, The latest supported version is 0.4.19
+INFO:root:contract /oyente/smartbugs-curated/dataset/bad_randomness/smart_billions.sol:SafeMath:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 100.0%
+INFO:symExec:	  Integer Underflow: 			 False
+INFO:symExec:	  Integer Overflow: 			 False
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract /oyente/smartbugs-curated/dataset/bad_randomness/smart_billions.sol:SmartBillions:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 22.6%
+INFO:symExec:	  Integer Underflow: 			 True
+INFO:symExec:	  Integer Overflow: 			 True
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): True
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:/oyente/smartbugs-curated/dataset/bad_randomness/smart_billions.sol:344:26: Warning: Integer Underflow.
+		        uint period = (block.number - hashFirst
+Integer Underflow occurs if:
+    investStart = 1
+    wallets[msg.sender].balance = 1000000000016384
+    hashFirst = 4194304
+/oyente/smartbugs-curated/dataset/bad_randomness/smart_billions.sol:345:29: Warning: Integer Underflow.
+                if(period > dividends.length - 2
+Integer Underflow occurs if:
+    investStart = 1
+    wallets[msg.sender].balance = 1000000000016384
+    dividends.length = 1
+    hashFirst = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+/oyente/smartbugs-curated/dataset/bad_randomness/smart_billions.sol:364:13: Warning: Integer Underflow.
+            walletBalance -= balance
+Integer Underflow occurs if:
+    wallets[msg.sender].balance = 411376139318328889125727538933413040096072175911373566445092863
+    walletBalance = 411376139318328889125727538933413040096072175911373566445092862
+    investStart = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+/oyente/smartbugs-curated/dataset/bad_randomness/smart_billions.sol:723:23: Warning: Integer Underflow.
+        uint delta = (_block - hashFirst
+Integer Underflow occurs if:
+    hashFirst = 134086920
+    investStart = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+INFO:symExec:/oyente/smartbugs-curated/dataset/bad_randomness/smart_billions.sol:339:47: Warning: Integer Overflow.
+        if(investStart > 1 && block.number >= investStart + (hashesSize * 5)
+Integer Overflow occurs if:
+    investStart = 115792089237316195423570985008687907853269984665640564039457584007913129558016
+    wallets[msg.sender].balance = 1000000000622592
+INFO:symExec:Flow1
+/oyente/smartbugs-curated/dataset/bad_randomness/smart_billions.sol:382:13: Warning: Transaction-Ordering Dependency.
+            msg.sender.transfer(maxpay)
+Flow2
+/oyente/smartbugs-curated/dataset/bad_randomness/smart_billions.sol:372:13: Warning: Transaction-Ordering Dependency.
+            msg.sender.transfer(_amount)
+INFO:symExec:	====== Analysis Completed ======
+Command exited with non-zero status 1
+	Command being timed: "python2 /oyente/oyente/oyente.py -s /oyente/smartbugs-curated/dataset/bad_randomness/smart_billions.sol"
+	User time (seconds): 50.58
+	System time (seconds): 0.30
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:50.88
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 143680
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 75693
+	Voluntary context switches: 11041
+	Involuntary context switches: 9492
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 824
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1

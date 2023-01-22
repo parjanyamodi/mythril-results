@@ -1,0 +1,78 @@
+WARNING:root:You are using evm version 1.8.2. The supported version is 1.7.3
+WARNING:root:You are using solc version 0.4.21, The latest supported version is 0.4.19
+INFO:root:contract /oyente/smartbugs-curated/dataset/bad_randomness/blackjack.sol:BlackJack:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 16.6%
+INFO:symExec:	  Integer Underflow: 			 False
+INFO:symExec:	  Integer Overflow: 			 True
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:/oyente/smartbugs-curated/dataset/bad_randomness/blackjack.sol:135:3: Warning: Integer Overflow.
+		games[msg.sender].playerCards
+Integer Overflow occurs if:
+    games[msg.sender].state = 0
+    games[msg.sender].player = 1461501637330902918203684832716283019655932542975
+/oyente/smartbugs-curated/dataset/bad_randomness/blackjack.sol:45:1: Warning: Integer Overflow.
+contract BlackJack {
+^
+Spanning multiple lines.
+Integer Overflow occurs if:
+    maxBet = 115792089237316195222703729476314123410524723122995238724182209776267932205055
+    minBet = 115792089237316195222703729476314123410524723122995238724182209776267932205055
+    games[msg.sender].player = 0
+/oyente/smartbugs-curated/dataset/bad_randomness/blackjack.sol:120:3: Warning: Integer Overflow.
+		games[msg.sender] = Game({
+		^
+Spanning multiple lines.
+Integer Overflow occurs if:
+    maxBet = 115792089237316195222703729476314123410524723122995238724182209776267932205055
+    minBet = 115792089237316195222703729476314123410524723122995238724182209776267932205055
+    games[msg.sender].player = 0
+/oyente/smartbugs-curated/dataset/bad_randomness/blackjack.sol:134:20: Warning: Integer Overflow.
+		uint8 nextCard = games[msg.sender].cardsDealt
+Integer Overflow occurs if:
+    games[msg.sender].state = 0
+    games[msg.sender].player = 1461501637330902918203684832716283019655932542975
+/oyente/smartbugs-curated/dataset/bad_randomness/blackjack.sol:135:3: Warning: Integer Overflow.
+		games[msg.sender].playerCards.push(Deck.deal(msg.sender, nextCard))
+Integer Overflow occurs if:
+    games[msg.sender].state = 0
+    games[msg.sender].player = 1461501637330902918203684832716283019655932542975
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract /oyente/smartbugs-curated/dataset/bad_randomness/blackjack.sol:Deck:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 100.0%
+INFO:symExec:	  Integer Underflow: 			 False
+INFO:symExec:	  Integer Overflow: 			 False
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:	====== Analysis Completed ======
+	Command being timed: "python2 /oyente/oyente/oyente.py -s /oyente/smartbugs-curated/dataset/bad_randomness/blackjack.sol"
+	User time (seconds): 3.57
+	System time (seconds): 0.09
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.66
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 119808
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 55730
+	Voluntary context switches: 2613
+	Involuntary context switches: 32
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 488
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

@@ -1,0 +1,76 @@
+WARNING:root:You are using evm version 1.8.2. The supported version is 1.7.3
+WARNING:root:You are using solc version 0.4.21, The latest supported version is 0.4.19
+INFO:root:contract /oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x84d9ec85c9c568eb332b7226a8f826d897e0a4a8.sol:Owned:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 66.8%
+INFO:symExec:	  Integer Underflow: 			 False
+INFO:symExec:	  Integer Overflow: 			 True
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  True
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x84d9ec85c9c568eb332b7226a8f826d897e0a4a8.sol:54:5: Warning: Integer Overflow.
+    function execute(address _dst, uint _value, bytes _data) onlyOwner {
+    ^
+Spanning multiple lines.
+Integer Overflow occurs if:
+    _data = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+INFO:symExec:/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x84d9ec85c9c568eb332b7226a8f826d897e0a4a8.sol:56:9: Warning: Callstack Depth Attack Vulnerability.
+        _dst.call.value(_value)(_data)
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract /oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x84d9ec85c9c568eb332b7226a8f826d897e0a4a8.sol:WedIndex:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 29.4%
+INFO:symExec:	  Integer Underflow: 			 True
+INFO:symExec:	  Integer Overflow: 			 True
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  True
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x84d9ec85c9c568eb332b7226a8f826d897e0a4a8.sol:66:5: Warning: Integer Underflow.
+    string public partnernames
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x84d9ec85c9c568eb332b7226a8f826d897e0a4a8.sol:65:5: Warning: Integer Underflow.
+    string public wedaddress
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x84d9ec85c9c568eb332b7226a8f826d897e0a4a8.sol:71:5: Warning: Integer Underflow.
+    IndexArray[] public indexarray
+INFO:symExec:/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x84d9ec85c9c568eb332b7226a8f826d897e0a4a8.sol:87:5: Warning: Integer Overflow.
+    function writeIndex(uint indexdate, string wedaddress, string partnernames, uint weddingdate, uint displaymultisig) {
+    ^
+Spanning multiple lines.
+Integer Overflow occurs if:
+    wedaddress = 115792089237316195423570985008687907853269984665640564039457584007913129639932
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x84d9ec85c9c568eb332b7226a8f826d897e0a4a8.sol:71:5: Warning: Integer Overflow.
+    IndexArray[] public indexarray
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x84d9ec85c9c568eb332b7226a8f826d897e0a4a8.sol:54:5: Warning: Integer Overflow.
+    function execute(address _dst, uint _value, bytes _data) onlyOwner {
+    ^
+Spanning multiple lines.
+INFO:symExec:/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x84d9ec85c9c568eb332b7226a8f826d897e0a4a8.sol:56:9: Warning: Callstack Depth Attack Vulnerability.
+        _dst.call.value(_value)(_data)
+INFO:symExec:	====== Analysis Completed ======
+Command exited with non-zero status 1
+	Command being timed: "python2 /oyente/oyente/oyente.py -s /oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x84d9ec85c9c568eb332b7226a8f826d897e0a4a8.sol"
+	User time (seconds): 2.56
+	System time (seconds): 0.11
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.66
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 96368
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 49871
+	Voluntary context switches: 1660
+	Involuntary context switches: 31
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 256
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1

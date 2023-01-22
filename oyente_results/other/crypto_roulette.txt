@@ -1,0 +1,50 @@
+WARNING:root:You are using evm version 1.8.2. The supported version is 1.7.3
+WARNING:root:You are using solc version 0.4.21, The latest supported version is 0.4.19
+INFO:root:contract /oyente/smartbugs-curated/dataset/other/crypto_roulette.sol:CryptoRoulette:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 63.4%
+INFO:symExec:	  Integer Underflow: 			 False
+INFO:symExec:	  Integer Overflow: 			 True
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:/oyente/smartbugs-curated/dataset/other/crypto_roulette.sol:14:1: Warning: Integer Overflow.
+contract CryptoRoulette {
+^
+Spanning multiple lines.
+Integer Overflow occurs if:
+    number = 2
+    betPrice = 0
+/oyente/smartbugs-curated/dataset/other/crypto_roulette.sol:25:5: Warning: Integer Overflow.
+    Game[] public gamesPlayed
+/oyente/smartbugs-curated/dataset/other/crypto_roulette.sol:43:9: Warning: Integer Overflow.
+        gamesPlayed.push(game)
+Integer Overflow occurs if:
+    number = 0
+    betPrice = 0
+INFO:symExec:	====== Analysis Completed ======
+	Command being timed: "python2 /oyente/oyente/oyente.py -s /oyente/smartbugs-curated/dataset/other/crypto_roulette.sol"
+	User time (seconds): 1.20
+	System time (seconds): 0.11
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.33
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 77528
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 36274
+	Voluntary context switches: 774
+	Involuntary context switches: 110
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 72
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

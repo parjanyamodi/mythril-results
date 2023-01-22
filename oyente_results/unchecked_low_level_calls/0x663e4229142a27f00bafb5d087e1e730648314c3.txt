@@ -1,0 +1,701 @@
+WARNING:root:You are using evm version 1.8.2. The supported version is 1.7.3
+WARNING:root:You are using solc version 0.4.21, The latest supported version is 0.4.19
+INFO:root:contract /oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:ClockAuction:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 39.8%
+INFO:symExec:	  Integer Underflow: 			 True
+INFO:symExec:	  Integer Overflow: 			 True
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  True
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:1381:39: Warning: Integer Underflow.
+            int256 totalPriceChange = int256(_endingPrice) - int256(_startingPrice)
+Integer Underflow occurs if:
+    paused = 0
+INFO:symExec:/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:1348:13: Warning: Integer Overflow.
+            _auction.startingPrice
+Integer Overflow occurs if:
+    paused = 0
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:1349:13: Warning: Integer Overflow.
+            _auction.endingPrice
+Integer Overflow occurs if:
+    paused = 0
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:1343:19: Warning: Integer Overflow.
+        if (now > _auction.startedAt
+Integer Overflow occurs if:
+    paused = 0
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:1350:13: Warning: Integer Overflow.
+            _auction.duration
+Integer Overflow occurs if:
+    paused = 0
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:1326:17: Warning: Integer Overflow.
+        return (_auction.startedAt
+Integer Overflow occurs if:
+    paused = 0
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:1235:9: Warning: Integer Overflow.
+        tokenIdToAuction[_tokenId] = _auction
+Integer Overflow occurs if:
+    _endingPrice = 0
+    _startingPrice = 0
+    _duration = 64
+    paused = 0
+INFO:symExec:/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:1496:20: Warning: Callstack Depth Attack Vulnerability.
+        bool res = nftAddress.send(this.balance)
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract /oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:ClockAuctionBase:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 99.1%
+INFO:symExec:	  Integer Underflow: 			 False
+INFO:symExec:	  Integer Overflow: 			 False
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract /oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:ERC721Metadata:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 15.5%
+INFO:symExec:	  Integer Underflow: 			 False
+INFO:symExec:	  Integer Overflow: 			 True
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:516:5: Warning: Integer Overflow.
+    function getMetadata(uint256 _tokenId, string) public view returns (bytes32[4] buffer, uint256 count) {
+    ^
+Spanning multiple lines.
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract /oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:Ownable:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 99.4%
+INFO:symExec:	  Integer Underflow: 			 False
+INFO:symExec:	  Integer Overflow: 			 False
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract /oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:PandaAccessControl:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 99.9%
+INFO:symExec:	  Integer Underflow: 			 False
+INFO:symExec:	  Integer Overflow: 			 False
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract /oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:PandaAuction:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 52.9%
+INFO:symExec:	  Integer Underflow: 			 True
+INFO:symExec:	  Integer Overflow: 			 True
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  True
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:397:13: Warning: Integer Underflow.
+            ownershipTokenCount[_from]--
+Integer Underflow occurs if:
+    ownershipTokenCount[_from] = 0
+    pandaIndexToOwner[_tokenId] = 1461501637330902918203684832716283019655932542975
+    pandaIndexToApproved[_tokenId] = 0
+    paused = 0
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:697:16: Warning: Integer Underflow.
+        return pandas.length - 1
+Integer Underflow occurs if:
+    pandas.length = 0
+INFO:symExec:/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:385:9: Warning: Integer Overflow.
+        Panda memory _p = pandas[_id]
+Integer Overflow occurs if:
+    pandas[_id] = 1
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:896:16: Warning: Integer Overflow.
+        return _isReadyToBreed(kit)
+Integer Overflow occurs if:
+    _pandaId = 1
+    pandas[_pandaId] = 2
+    pandaIndexToOwner[_tokenId] = 0
+    paused = 0
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:392:9: Warning: Integer Overflow.
+        ownershipTokenCount[_to]++
+Integer Overflow occurs if:
+    ownershipTokenCount[_to] = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    pandaIndexToOwner[_tokenId] = 0
+    pandaIndexToApproved[_tokenId] = 0
+    paused = 0
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:895:29: Warning: Integer Overflow.
+        Panda storage kit = pandas[_pandaId]
+Integer Overflow occurs if:
+    _pandaId = 1
+    pandas[_pandaId] = 2
+    pandaIndexToOwner[_tokenId] = 0
+    paused = 0
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:385:27: Warning: Integer Overflow.
+        Panda memory _p = pandas[_id]
+Integer Overflow occurs if:
+    pandas[_id] = 115792089237316195423570985008687907853269984665640564039457583691253780840448
+INFO:symExec:/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:1152:9: Warning: Callstack Depth Attack Vulnerability.
+        msg.sender.send(autoBirthFee)
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract /oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:PandaBase:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 88.7%
+INFO:symExec:	  Integer Underflow: 			 False
+INFO:symExec:	  Integer Overflow: 			 True
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:385:9: Warning: Integer Overflow.
+        Panda memory _p = pandas[_id]
+Integer Overflow occurs if:
+    _id = 0
+    pandas[_id] = 1
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:385:27: Warning: Integer Overflow.
+        Panda memory _p = pandas[_id]
+Integer Overflow occurs if:
+    _id = 115792089237316195423570985008687907853269984665640564039457584007913129639934
+    pandas[_id] = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract /oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:PandaBreeding:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 55.7%
+INFO:symExec:	  Integer Underflow: 			 True
+INFO:symExec:	  Integer Overflow: 			 True
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  True
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:397:13: Warning: Integer Underflow.
+            ownershipTokenCount[_from]--
+Integer Underflow occurs if:
+    ownershipTokenCount[_from] = 0
+    pandaIndexToOwner[_tokenId] = 1461501637330902918203684832716283019655932542975
+    pandaIndexToApproved[_tokenId] = 0
+    paused = 0
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:697:16: Warning: Integer Underflow.
+        return pandas.length - 1
+Integer Underflow occurs if:
+    pandas.length = 0
+INFO:symExec:/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:907:16: Warning: Integer Overflow.
+        return pandas[_pandaId].siringWithId
+Integer Overflow occurs if:
+    _pandaId = 1
+    pandas[_pandaId] = 2
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:953:13: Warning: Integer Overflow.
+        if (geneScience.getSex(_matron.genes)
+Integer Overflow occurs if:
+    _sireId = 26959946667150639794667015087019630673637144422540572481103610249214
+    _matronId = 57896044645618044378936132299010969013654623006457426442269364485060175069182
+    pandas[_matronId] = 57896044645618044378936132299010969013654623006457426442269364485060175069184
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:392:9: Warning: Integer Overflow.
+        ownershipTokenCount[_to]++
+Integer Overflow occurs if:
+    ownershipTokenCount[_to] = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    pandaIndexToOwner[_tokenId] = 0
+    pandaIndexToApproved[_tokenId] = 0
+    paused = 0
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:895:29: Warning: Integer Overflow.
+        Panda storage kit = pandas[_pandaId]
+Integer Overflow occurs if:
+    _pandaId = 1
+    pandas[_pandaId] = 2
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:385:9: Warning: Integer Overflow.
+        Panda memory _p = pandas[_id]
+Integer Overflow occurs if:
+    pandas[_id] = 1
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:907:16: Warning: Integer Overflow.
+        return pandas[_pandaId]
+Integer Overflow occurs if:
+    _pandaId = 1
+    pandas[_pandaId] = 2
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:896:16: Warning: Integer Overflow.
+        return _isReadyToBreed(kit)
+Integer Overflow occurs if:
+    _pandaId = 1
+    pandas[_pandaId] = 2
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:385:27: Warning: Integer Overflow.
+        Panda memory _p = pandas[_id]
+Integer Overflow occurs if:
+    pandas[_id] = 115792089237316195423570985008687907853184914073910329423591740354955675959296
+INFO:symExec:/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:1152:9: Warning: Callstack Depth Attack Vulnerability.
+        msg.sender.send(autoBirthFee)
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract /oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:PandaCore:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 46.9%
+INFO:symExec:	  Integer Underflow: 			 True
+INFO:symExec:	  Integer Overflow: 			 True
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  True
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:397:13: Warning: Integer Underflow.
+            ownershipTokenCount[_from]--
+Integer Underflow occurs if:
+    ownershipTokenCount[_from] = 0
+    pandaIndexToOwner[_tokenId] = 1461501637330902918203684832716283019655932542975
+    pandaIndexToApproved[_tokenId] = 0
+    paused = 0
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:697:16: Warning: Integer Underflow.
+        return pandas.length - 1
+Integer Underflow occurs if:
+    pandas.length = 0
+INFO:symExec:/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:931:44: Warning: Integer Overflow.
+        if (_matron.matronId == _sireId || _matron.sireId
+Integer Overflow occurs if:
+    pandas[_matronId] = 25108406941546723055343157692830665664409421777856138051585
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:931:13: Warning: Integer Overflow.
+        if (_matron.matronId
+Integer Overflow occurs if:
+    pandas[_matronId] = 57896265474541195009827073540416763263664060355064179049689618801890879864832
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:948:65: Warning: Integer Overflow.
+        if (_sire.sireId == _matron.matronId || _sire.sireId == _matron.sireId
+Integer Overflow occurs if:
+    pandas[_matronId] = 20769187434139310514121985316880385
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:953:49: Warning: Integer Overflow.
+        if (geneScience.getSex(_matron.genes) + geneScience.getSex(_sire.genes)
+Integer Overflow occurs if:
+    pandas[_matronId] = 57896044645618044378936132299010969013654623006457426442269364485060175069184
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:985:30: Warning: Integer Overflow.
+        Panda storage sire = pandas[_sireId]
+Integer Overflow occurs if:
+    pandas[_matronId] = 43556142965880142666125063585333126365184
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:948:29: Warning: Integer Overflow.
+        if (_sire.sireId == _matron.matronId
+Integer Overflow occurs if:
+    pandas[_matronId] = 3
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:945:31: Warning: Integer Overflow.
+        if (_sire.matronId == _matron.matronId
+Integer Overflow occurs if:
+    pandas[_matronId] = 862718293348820473429344482784628181556388621521298319395315527974913
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:984:32: Warning: Integer Overflow.
+        Panda storage matron = pandas[_matronId]
+Integer Overflow occurs if:
+    pandas[_matronId] = 65
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:940:13: Warning: Integer Overflow.
+        if (_sire.matronId
+Integer Overflow occurs if:
+    pandas[_matronId] = 862718293348820473429344482784628181556388621521298319395315527974913
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:2316:1: Warning: Integer Overflow.
+contract PandaCore is PandaMinting {
+^
+Spanning multiple lines.
+Integer Overflow occurs if:
+    cooAddress = 0
+    pandas.length = 0
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:940:36: Warning: Integer Overflow.
+        if (_sire.matronId == 0 || _matron.matronId
+Integer Overflow occurs if:
+    pandas[_matronId] = 862718293348820473429344482784628181556388621521298319395315527974913
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:945:51: Warning: Integer Overflow.
+        if (_sire.matronId == _matron.matronId || _sire.matronId
+Integer Overflow occurs if:
+    pandas[_matronId] = 72057594037927937
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:2429:29: Warning: Integer Overflow.
+        Panda storage kit = pandas[_id]
+Integer Overflow occurs if:
+    _id = 115792089237316195423570985008687907156371697211558590866466387987651832578047
+    pandas[_id] = 115792089237316195423570985008687907156371697211558590866466387987651832578048
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:948:13: Warning: Integer Overflow.
+        if (_sire.sireId
+Integer Overflow occurs if:
+    pandas[_matronId] = 3
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:392:9: Warning: Integer Overflow.
+        ownershipTokenCount[_to]++
+Integer Overflow occurs if:
+    ownershipTokenCount[_to] = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    pandaIndexToOwner[_tokenId] = 0
+    pandaIndexToApproved[_tokenId] = 0
+    paused = 0
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:895:29: Warning: Integer Overflow.
+        Panda storage kit = pandas[_pandaId]
+Integer Overflow occurs if:
+    pandas[_pandaId] = 1025
+    pandaIndexToOwner[_tokenId] = 0
+    paused = 0
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:2439:26: Warning: Integer Overflow.
+        sireId = uint256(kit.sireId
+Integer Overflow occurs if:
+    _id = 0
+    pandas[_id] = 1
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:2435:32: Warning: Integer Overflow.
+        nextActionAt = uint256(kit.cooldownEndBlock
+Integer Overflow occurs if:
+    _id = 0
+    pandas[_id] = 1
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:896:16: Warning: Integer Overflow.
+        return _isReadyToBreed(kit)
+Integer Overflow occurs if:
+    pandas[_pandaId] = 2
+    pandaIndexToOwner[_tokenId] = 0
+    paused = 0
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:2437:29: Warning: Integer Overflow.
+        birthTime = uint256(kit.birthTime
+Integer Overflow occurs if:
+    _id = 0
+    pandas[_id] = 1
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:945:69: Warning: Integer Overflow.
+        if (_sire.matronId == _matron.matronId || _sire.matronId == _matron.sireId
+Integer Overflow occurs if:
+    pandas[_matronId] = 72057594037927937
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:2436:32: Warning: Integer Overflow.
+        siringWithId = uint256(kit.siringWithId
+Integer Overflow occurs if:
+    _id = 0
+    pandas[_id] = 1
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:948:49: Warning: Integer Overflow.
+        if (_sire.sireId == _matron.matronId || _sire.sireId
+Integer Overflow occurs if:
+    pandas[_matronId] = 20769187434139310514121985316880385
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:385:9: Warning: Integer Overflow.
+        Panda memory _p = pandas[_id]
+Integer Overflow occurs if:
+    pandas[_id] = 1
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:2441:9: Warning: Integer Overflow.
+        genes = kit.genes
+Integer Overflow occurs if:
+    _id = 0
+    pandas[_id] = 1
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:2432:24: Warning: Integer Overflow.
+        isGestating = (kit.siringWithId
+Integer Overflow occurs if:
+    _id = 0
+    pandas[_id] = 1
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:945:13: Warning: Integer Overflow.
+        if (_sire.matronId
+Integer Overflow occurs if:
+    pandas[_matronId] = 862718293348820473429344482784628181556388621521298319395315527974913
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:934:44: Warning: Integer Overflow.
+        if (_sire.matronId == _matronId || _sire.sireId
+Integer Overflow occurs if:
+    pandas[_matronId] = 4503599627370497
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:2440:30: Warning: Integer Overflow.
+        generation = uint256(kit.generation
+Integer Overflow occurs if:
+    _id = 0
+    pandas[_id] = 1
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:2438:28: Warning: Integer Overflow.
+        matronId = uint256(kit.matronId
+Integer Overflow occurs if:
+    _id = 0
+    pandas[_id] = 1
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:2434:33: Warning: Integer Overflow.
+        cooldownIndex = uint256(kit.cooldownIndex
+Integer Overflow occurs if:
+    _id = 0
+    pandas[_id] = 1
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:2433:20: Warning: Integer Overflow.
+        isReady = (kit.cooldownEndBlock
+Integer Overflow occurs if:
+    _id = 0
+    pandas[_id] = 1
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:934:13: Warning: Integer Overflow.
+        if (_sire.matronId
+Integer Overflow occurs if:
+    pandas[_matronId] = 40564819207303340847894502572033
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:385:27: Warning: Integer Overflow.
+        Panda memory _p = pandas[_id]
+Integer Overflow occurs if:
+    pandas[_id] = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+INFO:symExec:/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:2467:13: Warning: Callstack Depth Attack Vulnerability.
+            cfoAddress.send(balance - subtractFees)
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:1152:9: Warning: Callstack Depth Attack Vulnerability.
+        msg.sender.send(autoBirthFee)
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract /oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:PandaMinting:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 48.3%
+INFO:symExec:	  Integer Underflow: 			 True
+INFO:symExec:	  Integer Overflow: 			 True
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  True
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:397:13: Warning: Integer Underflow.
+            ownershipTokenCount[_from]--
+Integer Underflow occurs if:
+    ownershipTokenCount[_from] = 0
+    pandaIndexToOwner[_tokenId] = 1461501637330902918203684832716283019655932542975
+    pandaIndexToApproved[_tokenId] = 0
+    paused = 0
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:697:16: Warning: Integer Underflow.
+        return pandas.length - 1
+Integer Underflow occurs if:
+    pandas.length = 0
+INFO:symExec:/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:392:9: Warning: Integer Overflow.
+        ownershipTokenCount[_to]++
+Integer Overflow occurs if:
+    ownershipTokenCount[_to] = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    pandaIndexToOwner[_tokenId] = 0
+    pandaIndexToApproved[_tokenId] = 0
+    paused = 0
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:895:29: Warning: Integer Overflow.
+        Panda storage kit = pandas[_pandaId]
+Integer Overflow occurs if:
+    pandas[_pandaId] = 2
+    pandaIndexToOwner[_tokenId] = 0
+    paused = 0
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:2208:1: Warning: Integer Overflow.
+contract PandaMinting is PandaAuction {
+^
+Spanning multiple lines.
+Integer Overflow occurs if:
+    _generation = 0
+    _owner = 1461501637330902918203684832716283019655932542975
+    cooAddress = 0
+    pandas.length = 0
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:385:9: Warning: Integer Overflow.
+        Panda memory _p = pandas[_id]
+Integer Overflow occurs if:
+    pandas[_id] = 1
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:896:16: Warning: Integer Overflow.
+        return _isReadyToBreed(kit)
+Integer Overflow occurs if:
+    pandas[_pandaId] = 2
+    pandaIndexToOwner[_tokenId] = 0
+    paused = 0
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:385:27: Warning: Integer Overflow.
+        Panda memory _p = pandas[_id]
+Integer Overflow occurs if:
+    pandas[_id] = 115792089237316195423570985008687907853184914073910329423591739230155280744448
+INFO:symExec:/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:1152:9: Warning: Callstack Depth Attack Vulnerability.
+        msg.sender.send(autoBirthFee)
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract /oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:PandaOwnership:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 90.8%
+INFO:symExec:	  Integer Underflow: 			 True
+INFO:symExec:	  Integer Overflow: 			 True
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:397:13: Warning: Integer Underflow.
+            ownershipTokenCount[_from]--
+Integer Underflow occurs if:
+    ownershipTokenCount[_from] = 0
+    _from = 1461501637330902918203684832716283019655932542975
+    pandaIndexToOwner[_tokenId] = 1461501637330902918203684832716283019655932542975
+    pandaIndexToApproved[_tokenId] = 0
+    _to = 1461501637330902918203684832716283019655932542975
+    paused = 0
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:697:16: Warning: Integer Underflow.
+        return pandas.length - 1
+Integer Underflow occurs if:
+    pandas.length = 0
+INFO:symExec:/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:385:9: Warning: Integer Overflow.
+        Panda memory _p = pandas[_id]
+Integer Overflow occurs if:
+    pandas[_id] = 1
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:392:9: Warning: Integer Overflow.
+        ownershipTokenCount[_to]++
+Integer Overflow occurs if:
+    ownershipTokenCount[_to] = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    _from = 0
+    pandaIndexToOwner[_tokenId] = 0
+    pandaIndexToApproved[_tokenId] = 0
+    _to = 1461501637330902918203684832716283019655932542975
+    paused = 0
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:385:27: Warning: Integer Overflow.
+        Panda memory _p = pandas[_id]
+Integer Overflow occurs if:
+    pandas[_id] = 115792089237316195423570985008687907853269984664372913439229354606416426434560
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract /oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:Pausable:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 99.8%
+INFO:symExec:	  Integer Underflow: 			 False
+INFO:symExec:	  Integer Overflow: 			 False
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract /oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:SaleClockAuction:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 34.7%
+INFO:symExec:	  Integer Underflow: 			 True
+INFO:symExec:	  Integer Overflow: 			 True
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  True
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:1381:39: Warning: Integer Underflow.
+            int256 totalPriceChange = int256(_endingPrice) - int256(_startingPrice)
+Integer Underflow occurs if:
+    tokenIdToAuction[_tokenId].isGen0 = 340282366920938463435704491321203884032
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:1808:81: Warning: Integer Underflow.
+        bytes32 bHash = keccak256(block.blockhash(block.number),block.blockhash(block.number-1
+INFO:symExec:/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:1348:13: Warning: Integer Overflow.
+            _auction.startingPrice
+Integer Overflow occurs if:
+    tokenIdToAuction[_tokenId].isGen0 = 170139885386254597987886682944382697472
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:1800:13: Warning: Integer Overflow.
+            RarePanda.push(_tokenId)
+Integer Overflow occurs if:
+    RarePanda.push(_tokenId) = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    _type = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    nonFungibleContract = 0
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:1689:1: Warning: Integer Overflow.
+contract SaleClockAuction is ClockAuction {
+^
+Spanning multiple lines.
+Integer Overflow occurs if:
+    RarePanda.push(_tokenId) = 105782898658114362639998236590588058411517566113314665475433552748888561006558
+    _type = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    nonFungibleContract = 0
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:1349:13: Warning: Integer Overflow.
+            _auction.endingPrice
+Integer Overflow occurs if:
+    tokenIdToAuction[_tokenId].isGen0 = 170139885386254597987886682944382697472
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:1798:13: Warning: Integer Overflow.
+            CommonPanda.push(_tokenId)
+Integer Overflow occurs if:
+    CommonPanda.push(_tokenId) = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    nonFungibleContract = 0
+    _type = 0
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:1350:13: Warning: Integer Overflow.
+            _auction.duration
+Integer Overflow occurs if:
+    tokenIdToAuction[_tokenId].isGen0 = 170139885386254597987886682944382697472
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:1343:19: Warning: Integer Overflow.
+        if (now > _auction.startedAt
+Integer Overflow occurs if:
+    tokenIdToAuction[_tokenId].isGen0 = 340282366920938463444927863358058659840
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:1326:17: Warning: Integer Overflow.
+        return (_auction.startedAt
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:1781:25: Warning: Integer Overflow.
+        uint64 isGen0 = tokenIdToAuction[_tokenId].isGen0
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:1235:9: Warning: Integer Overflow.
+        tokenIdToAuction[_tokenId] = _auction
+Integer Overflow occurs if:
+    _endingPrice = 0
+    _startingPrice = 0
+    _duration = 64
+    nonFungibleContract = 0
+INFO:symExec:/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:1496:20: Warning: Callstack Depth Attack Vulnerability.
+        bool res = nftAddress.send(this.balance)
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract /oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:SaleClockAuctionERC20:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 57.9%
+INFO:symExec:	  Integer Underflow: 			 True
+INFO:symExec:	  Integer Overflow: 			 True
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): True
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:1381:39: Warning: Integer Underflow.
+            int256 totalPriceChange = int256(_endingPrice) - int256(_startingPrice)
+INFO:symExec:/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:1595:13: Warning: Integer Overflow.
+            auction.endingPrice
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:1597:13: Warning: Integer Overflow.
+            auction.startedAt
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:1596:13: Warning: Integer Overflow.
+            auction.duration
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:1348:13: Warning: Integer Overflow.
+            _auction.startingPrice
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:1594:13: Warning: Integer Overflow.
+            auction.startingPrice
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:1349:13: Warning: Integer Overflow.
+            _auction.endingPrice
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:1343:19: Warning: Integer Overflow.
+        if (now > _auction.startedAt
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:1350:13: Warning: Integer Overflow.
+            _auction.duration
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:1235:9: Warning: Integer Overflow.
+        tokenIdToAuction[_tokenId] = _auction
+Integer Overflow occurs if:
+    paused = 0
+INFO:symExec:Flow1
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:1496:20: Warning: Transaction-Ordering Dependency.
+        bool res = nftAddress.send(this.balance)
+Flow2
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:1496:20: Warning: Transaction-Ordering Dependency.
+        bool res = nftAddress.send(this.balance)
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract /oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:SiringClockAuction:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 37.7%
+INFO:symExec:	  Integer Underflow: 			 True
+INFO:symExec:	  Integer Overflow: 			 True
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  True
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:1381:39: Warning: Integer Underflow.
+            int256 totalPriceChange = int256(_endingPrice) - int256(_startingPrice)
+Integer Underflow occurs if:
+    nonFungibleContract = 0
+INFO:symExec:/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:1348:13: Warning: Integer Overflow.
+            _auction.startingPrice
+Integer Overflow occurs if:
+    nonFungibleContract = 0
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:1349:13: Warning: Integer Overflow.
+            _auction.endingPrice
+Integer Overflow occurs if:
+    nonFungibleContract = 0
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:1343:19: Warning: Integer Overflow.
+        if (now > _auction.startedAt
+Integer Overflow occurs if:
+    nonFungibleContract = 0
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:1350:13: Warning: Integer Overflow.
+            _auction.duration
+Integer Overflow occurs if:
+    nonFungibleContract = 0
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:1326:17: Warning: Integer Overflow.
+        return (_auction.startedAt
+Integer Overflow occurs if:
+    nonFungibleContract = 0
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:1235:9: Warning: Integer Overflow.
+        tokenIdToAuction[_tokenId] = _auction
+Integer Overflow occurs if:
+    _endingPrice = 0
+    _startingPrice = 0
+    _duration = 64
+    nonFungibleContract = 0
+INFO:symExec:/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol:1496:20: Warning: Callstack Depth Attack Vulnerability.
+        bool res = nftAddress.send(this.balance)
+INFO:symExec:	====== Analysis Completed ======
+Command exited with non-zero status 1
+	Command being timed: "python2 /oyente/oyente/oyente.py -s /oyente/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol"
+	User time (seconds): 64.55
+	System time (seconds): 0.76
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:05.16
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 196124
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 176895
+	Voluntary context switches: 34795
+	Involuntary context switches: 475
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 6264
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1

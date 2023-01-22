@@ -1,0 +1,81 @@
+WARNING:root:You are using evm version 1.8.2. The supported version is 1.7.3
+WARNING:root:You are using solc version 0.4.21, The latest supported version is 0.4.19
+INFO:root:contract /oyente/smartbugs-curated/dataset/access_control/parity_wallet_bug_2.sol:WalletEvents:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 100.0%
+INFO:symExec:	  Integer Underflow: 			 False
+INFO:symExec:	  Integer Overflow: 			 False
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract /oyente/smartbugs-curated/dataset/access_control/parity_wallet_bug_2.sol:WalletLibrary:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 17.7%
+INFO:symExec:	  Integer Underflow: 			 False
+INFO:symExec:	  Integer Overflow: 			 True
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:/oyente/smartbugs-curated/dataset/access_control/parity_wallet_bug_2.sol:70:1: Warning: Integer Overflow.
+contract WalletLibrary is WalletEvents {
+^
+Spanning multiple lines.
+Integer Overflow occurs if:
+    m_pendingIndex.length = 105782898658114362639998236590588058411517566113314665475433552748888561006558
+    m_ownerIndex[uint(msg.sender)] = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+/oyente/smartbugs-curated/dataset/access_control/parity_wallet_bug_2.sol:329:9: Warning: Integer Overflow.
+        pending.ownersDone
+Integer Overflow occurs if:
+    m_ownerIndex[uint(msg.sender)] = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+/oyente/smartbugs-curated/dataset/access_control/parity_wallet_bug_2.sol:321:16: Warning: Integer Overflow.
+        delete m_pendingIndex[m_pending[_operation].index]
+Integer Overflow occurs if:
+    m_pending[_operation].index = 115792089237316195423570985008687907853269984665640564039457584007913129639934
+    m_pendingIndex[m_pending[_operation].index] = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    m_ownerIndex[uint(msg.sender)] = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+/oyente/smartbugs-curated/dataset/access_control/parity_wallet_bug_2.sol:309:7: Warning: Integer Overflow.
+      pending.ownersDone
+Integer Overflow occurs if:
+    m_ownerIndex[uint(msg.sender)] = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+/oyente/smartbugs-curated/dataset/access_control/parity_wallet_bug_2.sol:321:31: Warning: Integer Overflow.
+        delete m_pendingIndex[m_pending[_operation].index
+Integer Overflow occurs if:
+    m_ownerIndex[uint(msg.sender)] = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+/oyente/smartbugs-curated/dataset/access_control/parity_wallet_bug_2.sol:310:23: Warning: Integer Overflow.
+      pending.index = m_pendingIndex.length++
+Integer Overflow occurs if:
+    m_pendingIndex.length = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    m_ownerIndex[uint(msg.sender)] = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+/oyente/smartbugs-curated/dataset/access_control/parity_wallet_bug_2.sol:316:9: Warning: Integer Overflow.
+    if (pending.ownersDone
+Integer Overflow occurs if:
+    m_ownerIndex[uint(msg.sender)] = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+INFO:symExec:	====== Analysis Completed ======
+	Command being timed: "python2 /oyente/oyente/oyente.py -s /oyente/smartbugs-curated/dataset/access_control/parity_wallet_bug_2.sol"
+	User time (seconds): 3.13
+	System time (seconds): 0.14
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.27
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 109632
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 56439
+	Voluntary context switches: 5655
+	Involuntary context switches: 5086
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 416
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

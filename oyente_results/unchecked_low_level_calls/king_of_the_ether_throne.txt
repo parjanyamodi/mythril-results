@@ -1,0 +1,75 @@
+WARNING:root:You are using evm version 1.8.2. The supported version is 1.7.3
+WARNING:root:You are using solc version 0.4.21, The latest supported version is 0.4.19
+INFO:root:contract /oyente/smartbugs-curated/dataset/unchecked_low_level_calls/king_of_the_ether_throne.sol:KingOfTheEtherThrone:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 35.9%
+INFO:symExec:	  Integer Underflow: 			 True
+INFO:symExec:	  Integer Overflow: 			 True
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  True
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): True
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/king_of_the_ether_throne.sol:66:5: Warning: Integer Underflow.
+    Monarch public currentMonarch
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/king_of_the_ether_throne.sol:69:5: Warning: Integer Underflow.
+    Monarch[] public pastMonarchs
+INFO:symExec:/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/king_of_the_ether_throne.sol:26:1: Warning: Integer Overflow.
+contract KingOfTheEtherThrone {
+^
+Spanning multiple lines.
+Integer Overflow occurs if:
+    pastMonarchs.push(currentMonarch) = 19553522595453252762159207969660836113535560129003487626059407945321879306061
+    wizardAddress = 0
+    currentMonarch.etherAddress = 0
+    currentClaimPrice = 0
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/king_of_the_ether_throne.sol:103:5: Warning: Integer Overflow.
+    function claimThrone(string name) {
+    ^
+Spanning multiple lines.
+Integer Overflow occurs if:
+    name = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/king_of_the_ether_throne.sol:69:5: Warning: Integer Overflow.
+    Monarch[] public pastMonarchs
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/king_of_the_ether_throne.sol:138:9: Warning: Integer Overflow.
+        pastMonarchs.push(currentMonarch)
+Integer Overflow occurs if:
+    wizardAddress = 0
+    pastMonarchs.push(currentMonarch) = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    currentClaimPrice = 0
+    currentMonarch.etherAddress = 0
+INFO:symExec:/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/king_of_the_ether_throne.sol:118:13: Warning: Callstack Depth Attack Vulnerability.
+            msg.sender.send(excessPaid)
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/king_of_the_ether_throne.sol:132:13: Warning: Callstack Depth Attack Vulnerability.
+            currentMonarch.etherAddress.send(compensation)
+INFO:symExec:Flow1
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/king_of_the_ether_throne.sol:110:13: Warning: Transaction-Ordering Dependency.
+            msg.sender.send(valuePaid)
+Flow2
+/oyente/smartbugs-curated/dataset/unchecked_low_level_calls/king_of_the_ether_throne.sol:174:9: Warning: Transaction-Ordering Dependency.
+        wizardAddress.send(amount)
+INFO:symExec:	====== Analysis Completed ======
+Command exited with non-zero status 1
+	Command being timed: "python2 /oyente/oyente/oyente.py -s /oyente/smartbugs-curated/dataset/unchecked_low_level_calls/king_of_the_ether_throne.sol"
+	User time (seconds): 2.49
+	System time (seconds): 0.08
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.56
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 108036
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 51070
+	Voluntary context switches: 1203
+	Involuntary context switches: 21
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 184
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
