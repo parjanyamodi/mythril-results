@@ -1,2 +1,2 @@
-# mythril-results
+# Comparison of Detection Capabilities
  
