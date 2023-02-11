@@ -1,0 +1,31 @@
+KEY:
+{'access_control': ['112', '126'],
+ 'arithmetic': ['101'],
+ 'reentrancy': ['107'],
+ 'time_manipulation': ['114', '116']}
+============================================================
+For 101:
+101:
+time: 291.11999999999983  success: 13  total: 34  
+
+For 107:
+107:
+time: 80.86999999999998  success: 21  total: 37  
+
+For 112:
+112:
+time: 12.04  success: 0  total: 5  
+
+For 114:
+114:
+time: 5.859999999999999  success: 0  total: 4  
+
+For 116:
+116:
+time: 5.859999999999999  success: 0  total: 4  
+
+For 126:
+126:
+time: 12.04  success: 1  total: 5  
+
+============================================================
