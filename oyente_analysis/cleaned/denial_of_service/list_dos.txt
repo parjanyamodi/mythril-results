@@ -1,0 +1,16 @@
+{
+    "core_usage": " 95%",
+    "EVM,Code,Coverage:": "44.6%",
+    "success": true,
+    "issues": [
+        100
+    ],
+    "Integer,Underflow:": "True",
+    "Integer,Overflow:": "True",
+    "Parity,Multisig,Bug,2:": "False",
+    "Callstack,Depth,Attack,Vulnerability:": "True",
+    "Transaction-Ordering,Dependence": "False",
+    "Timestamp,Dependency:": "True",
+    "Re-Entrancy,Vulnerability:": "False",
+    "time": 7.28
+}

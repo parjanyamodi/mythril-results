@@ -1,0 +1,3 @@
+{
+    "response": "Solidity compilation failed. Please use -ce flag to see the detail."
+}
