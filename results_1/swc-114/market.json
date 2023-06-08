@@ -1,0 +1,3 @@
+{"success": false, "error": "Compiler not found. Make sure that solc is installed and in PATH, or set the SOLC environment variable.", "issues": []}
+2.17user 0.69system 0:02.13elapsed 133%CPU (0avgtext+0avgdata 112812maxresident)k
+0inputs+16outputs (0major+22398minor)pagefaults 0swaps

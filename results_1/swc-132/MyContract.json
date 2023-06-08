@@ -1,0 +1,3 @@
+{"success": false, "error": "Solc experienced a fatal error.\n\n/home/ubuntu/curated-vulnerable-contracts/swc-132/MyContract.sol:17:20: ParserError: Expected ';' but got 'contract'\n        MyContract contract = MyContract(_contract);\n                   ^------^\n", "issues": []}
+2.40user 0.55system 0:02.49elapsed 118%CPU (0avgtext+0avgdata 124396maxresident)k
+0inputs+9904outputs (0major+25633minor)pagefaults 0swaps
