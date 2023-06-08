@@ -10,7 +10,7 @@ import fnmatch
 MYTHRIL = (
     "time -v myth a {} --parallel-solving --execution-timeout 6 -o json > {} 2>&1"
 )
-OYENTE = "time -v oyente -s {} > {} 2>&1"
+OYENTE = "time -v /oyente/oyente/oyente.py -s {} > {} 2>&1"
 TOOL = "MYTHRIL"
 MAX_NO_OF_THREADS = 7
 
