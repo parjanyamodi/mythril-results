@@ -1,0 +1,4 @@
+{"error": null, "issues": [{"address": 413, "code": "for(uint i=0;i<numbers;i++) {\n            if(numElements == array.length) {\n                array.length += 1;\n            }\n            array[numElements++] = value;\n        }", "contract": "DosNumber", "description": "Potential denial-of-service if block gas limit is reached.\nA storage modification is executed in a loop.", "filename": "/home/ubuntu/curated-vulnerable-contracts/swc-128/dos_number.sol", "function": "insertNnumbers(uint256,uint256)", "lineno": 18, "max_gas_used": 215966, "min_gas_used": 55586, "severity": "Low", "sourceMap": "468:176", "swc-id": "128", "title": "Potential denial-of-service if block gas limit is reached", "tx_sequence": null}], "success": true}
+Command exited with non-zero status 1
+18.87user 0.71system 0:19.05elapsed 102%CPU (0avgtext+0avgdata 192344maxresident)k
+0inputs+280outputs (0major+44879minor)pagefaults 0swaps

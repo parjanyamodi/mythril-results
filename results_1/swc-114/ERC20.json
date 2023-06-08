@@ -1,0 +1,4 @@
+mythril.mythril.mythril_analyzer [CRITICAL]: Keyboard Interrupt
+{"error": null, "issues": [], "success": true}
+2019.06user 0.94system 33:41.16elapsed 99%CPU (0avgtext+0avgdata 178220maxresident)k
+0inputs+14240outputs (0major+54358minor)pagefaults 0swaps
