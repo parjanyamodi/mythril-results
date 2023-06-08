@@ -1,0 +1,1 @@
+{"success": false, "error": "Solc experienced a fatal error.\n\n/Users/vijayeshjeevan/Desktop/PP1/curated-vulnerable-contracts/swc-132/MyContract.sol:17:20: ParserError: Expected ';' but got 'contract'\n        MyContract contract = MyContract(_contract);\n                   ^------^\n", "issues": []}

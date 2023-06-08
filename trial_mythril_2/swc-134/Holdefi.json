@@ -1,0 +1,52 @@
+Traceback (most recent call last):
+  File "/Users/vijayeshjeevan/Desktop/PP1/mythril-results/../private-mythril/myth", line 7, in <module>
+    import mythril.interfaces.cli
+  File "/Users/vijayeshjeevan/Desktop/PP1/private-mythril/mythril/__init__.py", line 8, in <module>
+    from mythril.plugin.loader import MythrilPluginLoader
+  File "/Users/vijayeshjeevan/Desktop/PP1/private-mythril/mythril/plugin/__init__.py", line 1, in <module>
+    from mythril.plugin.interface import MythrilPlugin, MythrilCLIPlugin
+  File "/Users/vijayeshjeevan/Desktop/PP1/private-mythril/mythril/plugin/interface.py", line 2, in <module>
+    from mythril.laser.plugin.builder import PluginBuilder as LaserPluginBuilder
+  File "/Users/vijayeshjeevan/Desktop/PP1/private-mythril/mythril/laser/plugin/builder.py", line 1, in <module>
+    from mythril.laser.plugin.interface import LaserPlugin
+  File "/Users/vijayeshjeevan/Desktop/PP1/private-mythril/mythril/laser/plugin/interface.py", line 1, in <module>
+    from mythril.laser.ethereum.svm import LaserEVM
+  File "/Users/vijayeshjeevan/Desktop/PP1/private-mythril/mythril/laser/ethereum/svm.py", line 10, in <module>
+    from mythril.analysis.potential_issues import check_potential_issues
+  File "/Users/vijayeshjeevan/Desktop/PP1/private-mythril/mythril/analysis/potential_issues.py", line 3, in <module>
+    from mythril.analysis.solver import get_transaction_sequence
+  File "/Users/vijayeshjeevan/Desktop/PP1/private-mythril/mythril/analysis/solver.py", line 16, in <module>
+    from mythril.laser.ethereum.state.global_state import GlobalState
+  File "/Users/vijayeshjeevan/Desktop/PP1/private-mythril/mythril/laser/ethereum/state/global_state.py", line 10, in <module>
+    from mythril.laser.ethereum.state.machine_state import MachineState
+  File "/Users/vijayeshjeevan/Desktop/PP1/private-mythril/mythril/laser/ethereum/state/machine_state.py", line 7, in <module>
+    from eth._utils.numeric import ceil32
+  File "/Users/vijayeshjeevan/Library/Python/3.9/lib/python/site-packages/eth/__init__.py", line 4, in <module>
+    from eth.chains import (  # noqa: F401
+  File "/Users/vijayeshjeevan/Library/Python/3.9/lib/python/site-packages/eth/chains/__init__.py", line 1, in <module>
+    from .base import (  # noqa: F401
+  File "/Users/vijayeshjeevan/Library/Python/3.9/lib/python/site-packages/eth/chains/base.py", line 55, in <module>
+    from eth.consensus import (
+  File "/Users/vijayeshjeevan/Library/Python/3.9/lib/python/site-packages/eth/consensus/__init__.py", line 2, in <module>
+    from .clique.clique import (  # noqa: F401
+  File "/Users/vijayeshjeevan/Library/Python/3.9/lib/python/site-packages/eth/consensus/clique/__init__.py", line 1, in <module>
+    from .clique import (  # noqa: F401
+  File "/Users/vijayeshjeevan/Library/Python/3.9/lib/python/site-packages/eth/consensus/clique/clique.py", line 13, in <module>
+    from eth.db.chain import ChainDB
+  File "/Users/vijayeshjeevan/Library/Python/3.9/lib/python/site-packages/eth/db/chain.py", line 22, in <module>
+    from trie.exceptions import (
+  File "/Users/vijayeshjeevan/Library/Python/3.9/lib/python/site-packages/trie/__init__.py", line 3, in <module>
+    from .binary import (  # noqa: F401
+  File "/Users/vijayeshjeevan/Library/Python/3.9/lib/python/site-packages/trie/binary.py", line 13, in <module>
+    from trie.exceptions import (
+  File "/Users/vijayeshjeevan/Library/Python/3.9/lib/python/site-packages/trie/exceptions.py", line 8, in <module>
+    from trie.typing import (
+  File "/Users/vijayeshjeevan/Library/Python/3.9/lib/python/site-packages/trie/typing.py", line 11, in <module>
+    from typing_extensions import (
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 982, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 925, in _find_spec
+  File "<frozen importlib._bootstrap_external>", line 1414, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 1386, in _get_spec
+  File "<frozen importlib._bootstrap_external>", line 1516, in find_spec
+KeyboardInterrupt

@@ -1,0 +1,28 @@
+Traceback (most recent call last):
+  File "/Users/vijayeshjeevan/Desktop/PP1/mythril-results/../private-mythril/myth", line 7, in <module>
+    import mythril.interfaces.cli
+  File "/Users/vijayeshjeevan/Desktop/PP1/private-mythril/mythril/__init__.py", line 8, in <module>
+    from mythril.plugin.loader import MythrilPluginLoader
+  File "/Users/vijayeshjeevan/Desktop/PP1/private-mythril/mythril/plugin/__init__.py", line 1, in <module>
+    from mythril.plugin.interface import MythrilPlugin, MythrilCLIPlugin
+  File "/Users/vijayeshjeevan/Desktop/PP1/private-mythril/mythril/plugin/interface.py", line 2, in <module>
+    from mythril.laser.plugin.builder import PluginBuilder as LaserPluginBuilder
+  File "/Users/vijayeshjeevan/Desktop/PP1/private-mythril/mythril/laser/plugin/builder.py", line 1, in <module>
+    from mythril.laser.plugin.interface import LaserPlugin
+  File "/Users/vijayeshjeevan/Desktop/PP1/private-mythril/mythril/laser/plugin/interface.py", line 1, in <module>
+    from mythril.laser.ethereum.svm import LaserEVM
+  File "/Users/vijayeshjeevan/Desktop/PP1/private-mythril/mythril/laser/ethereum/svm.py", line 10, in <module>
+    from mythril.analysis.potential_issues import check_potential_issues
+  File "/Users/vijayeshjeevan/Desktop/PP1/private-mythril/mythril/analysis/potential_issues.py", line 1, in <module>
+    from mythril.analysis.report import Issue
+  File "/Users/vijayeshjeevan/Desktop/PP1/private-mythril/mythril/analysis/report.py", line 6, in <module>
+    from eth_abi import decode_abi
+  File "/Users/vijayeshjeevan/Library/Python/3.9/lib/python/site-packages/eth_abi/__init__.py", line 4, in <module>
+    import pkg_resources
+  File "/Users/vijayeshjeevan/Library/Python/3.9/lib/python/site-packages/pkg_resources/__init__.py", line 29, in <module>
+    import zipfile
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/zipfile.py", line 12, in <module>
+    import shutil
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/shutil.py", line 15, in <module>
+    import zlib
+KeyboardInterrupt

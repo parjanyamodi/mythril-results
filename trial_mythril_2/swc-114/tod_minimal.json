@@ -1,0 +1,23 @@
+Traceback (most recent call last):
+  File "/Users/vijayeshjeevan/Desktop/PP1/mythril-results/../private-mythril/myth", line 7, in <module>
+    import mythril.interfaces.cli
+  File "/Users/vijayeshjeevan/Desktop/PP1/private-mythril/mythril/__init__.py", line 8, in <module>
+    from mythril.plugin.loader import MythrilPluginLoader
+  File "/Users/vijayeshjeevan/Desktop/PP1/private-mythril/mythril/plugin/__init__.py", line 1, in <module>
+    from mythril.plugin.interface import MythrilPlugin, MythrilCLIPlugin
+  File "/Users/vijayeshjeevan/Desktop/PP1/private-mythril/mythril/plugin/interface.py", line 2, in <module>
+    from mythril.laser.plugin.builder import PluginBuilder as LaserPluginBuilder
+  File "/Users/vijayeshjeevan/Desktop/PP1/private-mythril/mythril/laser/plugin/builder.py", line 1, in <module>
+    from mythril.laser.plugin.interface import LaserPlugin
+  File "/Users/vijayeshjeevan/Desktop/PP1/private-mythril/mythril/laser/plugin/interface.py", line 1, in <module>
+    from mythril.laser.ethereum.svm import LaserEVM
+  File "/Users/vijayeshjeevan/Desktop/PP1/private-mythril/mythril/laser/ethereum/svm.py", line 10, in <module>
+    from mythril.analysis.potential_issues import check_potential_issues
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 982, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 925, in _find_spec
+  File "<frozen importlib._bootstrap_external>", line 1414, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 1386, in _get_spec
+  File "<frozen importlib._bootstrap_external>", line 1517, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 1560, in _fill_cache
+KeyboardInterrupt

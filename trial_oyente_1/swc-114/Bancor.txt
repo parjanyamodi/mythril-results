@@ -1,0 +1,125 @@
+WARNING:root:You are using evm version 1.8.2. The supported version is 1.7.3
+WARNING:root:You are using solc version 0.4.21, The latest supported version is 0.4.19
+INFO:root:contract /oyente/dataset/swc-114/Bancor.sol:BancorFormula:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 54.3%
+INFO:symExec:	  Integer Underflow: 			 True
+INFO:symExec:	  Integer Overflow: 			 True
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:/oyente/dataset/swc-114/Bancor.sol:147:5: Warning: Integer Underflow.
+    string public version = '0.2'
+INFO:symExec:/oyente/dataset/swc-114/Bancor.sol:102:21: Warning: Integer Overflow.
+        uint256 z = _x + _y
+Integer Overflow occurs if:
+    _depositAmount = 101115572911892378546349970303374474522395492602777849833429955832318540595664
+    _reserveBalance = 70408497496580397076911465863728899147289650320384937996482722560166534455721
+    _reserveRatio = 1
+    _supply = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+/oyente/dataset/swc-114/Bancor.sol:370:13: Warning: Integer Overflow.
+            hi += fixedOne
+Integer Overflow occurs if:
+    _x = 115792089237316195411016781537914546325598405819225231207252873118985060614144
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract /oyente/dataset/swc-114/Bancor.sol:BasicERC20Token:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 68.5%
+INFO:symExec:	  Integer Underflow: 			 True
+INFO:symExec:	  Integer Overflow: 			 True
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:/oyente/dataset/swc-114/Bancor.sol:6:5: Warning: Integer Underflow.
+    string public name = 'Ivan\'s Trackable Token'
+/oyente/dataset/swc-114/Bancor.sol:72:9: Warning: Integer Underflow.
+        totalSupply -= amount
+Integer Underflow occurs if:
+    amount = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    totalSupply = 115792089237316195423570985008687907853269984665640564039457584007913129639934
+    balances[msg.sender] = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+/oyente/dataset/swc-114/Bancor.sol:5:5: Warning: Integer Underflow.
+    string public standard = 'Token 0.1'
+/oyente/dataset/swc-114/Bancor.sol:7:5: Warning: Integer Underflow.
+    string public symbol = 'ITT'
+INFO:symExec:/oyente/dataset/swc-114/Bancor.sol:27:13: Warning: Integer Overflow.
+            balances[_to] += _value
+Integer Overflow occurs if:
+    balances[_to] = 111771850588589477980448691424064340015804983699214872171395667984683992420155
+    _value = 67419346655525027280071070946112097648534143608088887667851415925010121249705
+    balances[msg.sender] = 67419346655525027280071070946112097648534143608088887667851415925010121249705
+/oyente/dataset/swc-114/Bancor.sol:64:9: Warning: Integer Overflow.
+        balances[msg.sender] += msg.value
+Integer Overflow occurs if:
+    balances[msg.sender] = 89660649888868366171417216235708288031085258661234677303951427843448891257349
+/oyente/dataset/swc-114/Bancor.sol:65:9: Warning: Integer Overflow.
+        totalSupply += msg.value
+Integer Overflow occurs if:
+    totalSupply = 89660649888868366171417216235708288031085258661234677303951427843448891257349
+/oyente/dataset/swc-114/Bancor.sol:37:13: Warning: Integer Overflow.
+            balances[_to] += _value
+Integer Overflow occurs if:
+    _value = 43422033463993573283839119378257965444976244249615211514796594002966269975960
+    balances[_to] = 115792089237316195423570985008687907852929702298719625575994204896882187098296
+    allowed[_from][msg.sender] = 43422033463993573283839119378257965444976244249615211514796594002966269975960
+    balances[_from] = 43422033463993573283839119378257965444976244249615211514796594002966269975960
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract /oyente/dataset/swc-114/Bancor.sol:DummyBancorToken:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 20.5%
+INFO:symExec:	  Integer Underflow: 			 True
+INFO:symExec:	  Integer Overflow: 			 True
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:/oyente/dataset/swc-114/Bancor.sol:567:5: Warning: Integer Underflow.
+    string public name = 'Dummy Constant Reserve Rate Token'
+INFO:symExec:/oyente/dataset/swc-114/Bancor.sol:370:13: Warning: Integer Overflow.
+            hi += fixedOne
+/oyente/dataset/swc-114/Bancor.sol:37:13: Warning: Integer Overflow.
+            balances[_to] += _value
+Integer Overflow occurs if:
+    balances[_to] = 115792089237316195423570985008687907852929702298719625575994204896882187098296
+    allowed[_from][msg.sender] = 43422033463993573283839119378257965444976244249615211514796594002966269975960
+    balances[_from] = 43422033463993573283839119378257965444976244249615211514796594002966269975960
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract /oyente/dataset/swc-114/Bancor.sol:SafeMath:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 100.0%
+INFO:symExec:	  Integer Underflow: 			 False
+INFO:symExec:	  Integer Overflow: 			 False
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:	====== Analysis Completed ======
+	Command being timed: "/oyente/oyente/oyente.py -s /oyente/dataset/swc-114/Bancor.sol"
+	User time (seconds): 46.48
+	System time (seconds): 1.06
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:47.40
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 282724
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 136235
+	Voluntary context switches: 11180
+	Involuntary context switches: 9538
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 864
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

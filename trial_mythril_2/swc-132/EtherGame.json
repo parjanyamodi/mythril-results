@@ -1,0 +1,32 @@
+Traceback (most recent call last):
+  File "/Users/vijayeshjeevan/Desktop/PP1/mythril-results/../private-mythril/myth", line 7, in <module>
+    import mythril.interfaces.cli
+  File "/Users/vijayeshjeevan/Desktop/PP1/private-mythril/mythril/__init__.py", line 8, in <module>
+    from mythril.plugin.loader import MythrilPluginLoader
+  File "/Users/vijayeshjeevan/Desktop/PP1/private-mythril/mythril/plugin/__init__.py", line 1, in <module>
+    from mythril.plugin.interface import MythrilPlugin, MythrilCLIPlugin
+  File "/Users/vijayeshjeevan/Desktop/PP1/private-mythril/mythril/plugin/interface.py", line 2, in <module>
+    from mythril.laser.plugin.builder import PluginBuilder as LaserPluginBuilder
+  File "/Users/vijayeshjeevan/Desktop/PP1/private-mythril/mythril/laser/plugin/builder.py", line 1, in <module>
+    from mythril.laser.plugin.interface import LaserPlugin
+  File "/Users/vijayeshjeevan/Desktop/PP1/private-mythril/mythril/laser/plugin/interface.py", line 1, in <module>
+    from mythril.laser.ethereum.svm import LaserEVM
+  File "/Users/vijayeshjeevan/Desktop/PP1/private-mythril/mythril/laser/ethereum/svm.py", line 10, in <module>
+    from mythril.analysis.potential_issues import check_potential_issues
+  File "/Users/vijayeshjeevan/Desktop/PP1/private-mythril/mythril/analysis/potential_issues.py", line 1, in <module>
+    from mythril.analysis.report import Issue
+  File "/Users/vijayeshjeevan/Desktop/PP1/private-mythril/mythril/analysis/report.py", line 12, in <module>
+    from mythril.solidity.soliditycontract import SolidityContract
+  File "/Users/vijayeshjeevan/Desktop/PP1/private-mythril/mythril/solidity/soliditycontract.py", line 7, in <module>
+    from mythril.ethereum.evmcontract import EVMContract
+  File "/Users/vijayeshjeevan/Desktop/PP1/private-mythril/mythril/ethereum/evmcontract.py", line 8, in <module>
+    from mythril.disassembler.disassembly import Disassembly
+  File "/Users/vijayeshjeevan/Desktop/PP1/private-mythril/mythril/disassembler/disassembly.py", line 2, in <module>
+    from mythril.ethereum import util
+  File "/Users/vijayeshjeevan/Desktop/PP1/private-mythril/mythril/ethereum/util.py", line 14, in <module>
+    from requests.exceptions import ConnectionError
+  File "/Users/vijayeshjeevan/Library/Python/3.9/lib/python/site-packages/requests/__init__.py", line 45, in <module>
+    from .exceptions import RequestsDependencyWarning
+  File "/Users/vijayeshjeevan/Library/Python/3.9/lib/python/site-packages/requests/exceptions.py", line 31, in <module>
+    class JSONDecodeError(InvalidJSONError, CompatJSONDecodeError):
+KeyboardInterrupt

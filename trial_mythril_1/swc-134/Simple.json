@@ -1,0 +1,1 @@
+{"success": false, "error": "Solc experienced a fatal error.\n\nTypeError: \"send\" and \"transfer\" are only available for objects of type \"address payable\", not \"address\".\n --> /Users/vijayeshjeevan/Desktop/PP1/curated-vulnerable-contracts/swc-134/Simple.sol:5:9:\n  |\n5 |         msg.sender.transfer(amount);\n  |         ^^^^^^^^^^^^^^^^^^^\n\n", "issues": []}
