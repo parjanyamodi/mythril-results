@@ -20,11 +20,10 @@ VULN_MAPPING = {
     "Re-Entrancy Vulnerability": "107",
 }
 FLDR_MAPPING = {
-    "arithmetic": ["101"],
-    "arithmetic": ["101"],
-    "access_control": ["112", "126"],
-    "time_manipulation": ["114", "116"],
-    "reentrancy": ["107"],
+    "swc-114": ["114"],
+    "swc-128": ["128"],
+    "swc-132": ["132"],
+    "swc-134": ["134"],
 }
 
 
@@ -32,6 +31,10 @@ smartbugs = {
     "101": {"time": 0, "success": 0, "total": 0},
     "107": {"time": 0, "success": 0, "total": 0},
     "112": {"time": 0, "success": 0, "total": 0},
+    "114": {"time": 0, "success": 0, "total": 0},
+    "128": {"time": 0, "success": 0, "total": 0},
+    "132": {"time": 0, "success": 0, "total": 0},
+    "134": {"time": 0, "success": 0, "total": 0},
     "114": {"time": 0, "success": 0, "total": 0},
     "116": {"time": 0, "success": 0, "total": 0},
     "107": {"time": 0, "success": 0, "total": 0},
