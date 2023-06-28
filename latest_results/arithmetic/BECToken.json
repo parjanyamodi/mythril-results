@@ -1,0 +1,4 @@
+{"error": null, "issues": [{"address": 534, "contract": "BecToken", "description": "Potential denial-of-service if block gas limit is reached.\nA storage modification is executed in a loop. This issue is reported for internal compiler generated code.", "function": "constructor", "max_gas_used": 81778, "min_gas_used": 19376, "severity": "Low", "sourceMap": "8331:882", "swc-id": "128", "title": "Potential denial-of-service if block gas limit is reached", "tx_sequence": null}], "success": true}
+Command exited with non-zero status 1
+206.69user 1.29system 3:26.84elapsed 100%CPU (0avgtext+0avgdata 541772maxresident)k
+0inputs+24outputs (0major+224615minor)pagefaults 0swaps

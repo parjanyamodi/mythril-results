@@ -1,0 +1,4 @@
+{"error": null, "issues": [{"address": 150, "code": "for(uint i=0;i<350;i++) {\n                listAddresses.push(msg.sender);\n            }", "contract": "DosOneFunc", "description": "Potential denial-of-service if block gas limit is reached.\nA storage modification is executed in a loop.", "filename": "/home/ubuntu/smartbugs-curated/dataset/denial_of_service/dos_simple.sol", "function": "ifillArray()", "lineno": 17, "max_gas_used": 132833, "min_gas_used": 31463, "severity": "Low", "sourceMap": "400:87", "swc-id": "128", "title": "Potential denial-of-service if block gas limit is reached", "tx_sequence": null}], "success": true}
+Command exited with non-zero status 1
+4.02user 0.84system 0:03.98elapsed 122%CPU (0avgtext+0avgdata 135788maxresident)k
+0inputs+24outputs (0major+26540minor)pagefaults 0swaps
