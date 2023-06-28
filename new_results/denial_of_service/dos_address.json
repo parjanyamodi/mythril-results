@@ -1,0 +1,4 @@
+{"error": null, "issues": [{"address": 408, "code": "for(uint i=0;i<350;i++) {\n          creditorAddresses.push(msg.sender);\n        }", "contract": "DosGas", "description": "Potential denial-of-service if block gas limit is reached.\nA storage modification is executed in a loop.", "filename": "/home/ubuntu/smartbugs-curated/dataset/denial_of_service/dos_address.sol", "function": "addCreditors()", "lineno": 23, "max_gas_used": 132044, "min_gas_used": 30674, "severity": "Low", "sourceMap": "554:81", "swc-id": "128", "title": "Potential denial-of-service if block gas limit is reached", "tx_sequence": null}], "success": true}
+Command exited with non-zero status 1
+3.61user 0.83system 0:03.57elapsed 124%CPU (0avgtext+0avgdata 141548maxresident)k
+0inputs+24outputs (0major+28058minor)pagefaults 0swaps

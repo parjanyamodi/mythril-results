@@ -1,0 +1,3 @@
+{"success": false, "error": "Solc experienced a fatal error.\n\nParserError: Source file requires different compiler version (current compiler is 0.8.20+commit.a1b79de6.Linux.g++) - note that nightly builds are considered to be strictly less than the released version\n --> /home/ubuntu/smartbugs-curated/dataset/reentrancy/etherstore.sol:8:1:\n  |\n8 | pragma solidity ^0.4.0;\n  | ^^^^^^^^^^^^^^^^^^^^^^^\n\n\nSolidityVersionMismatch: Try adding the option \"--solv <version_number>\"\n", "issues": []}
+1.49user 1.07system 0:01.07elapsed 239%CPU (0avgtext+0avgdata 112372maxresident)k
+0inputs+16outputs (0major+22790minor)pagefaults 0swaps

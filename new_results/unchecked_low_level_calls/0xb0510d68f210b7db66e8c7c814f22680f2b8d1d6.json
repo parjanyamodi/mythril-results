@@ -1,0 +1,40 @@
+mythril.mythril.mythril_analyzer [CRITICAL]: Exception occurred, aborting analysis. Please report this issue to the Mythril GitHub page.
+Traceback (most recent call last):
+  File "/home/ubuntu/private-mythril/mythril/laser/ethereum/state/machine_state.py", line 74, in __getitem__
+    return super(MachineStack, self).__getitem__(item)
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/private-mythril/mythril/mythril/mythril_analyzer.py", line 141, in fire_lasers
+    sym = SymExecWrapper(
+  File "/home/ubuntu/private-mythril/mythril/analysis/symbolic.py", line 172, in __init__
+    self.laser.sym_exec(
+  File "/home/ubuntu/private-mythril/mythril/laser/ethereum/svm.py", line 201, in sym_exec
+    self.execute_transactions(created_account.address)
+  File "/home/ubuntu/private-mythril/mythril/laser/ethereum/svm.py", line 226, in execute_transactions
+    self._execute_transactions(address)
+  File "/home/ubuntu/private-mythril/mythril/laser/ethereum/svm.py", line 272, in _execute_transactions
+    execute_message_call(self, address, func_hashes=func_hashes)
+  File "/home/ubuntu/private-mythril/mythril/laser/ethereum/transaction/symbolic.py", line 151, in execute_message_call
+    laser_evm.exec()
+  File "/home/ubuntu/private-mythril/mythril/laser/ethereum/svm.py", line 314, in exec
+    new_states, op_code = self.execute_state(global_state)
+  File "/home/ubuntu/private-mythril/mythril/laser/ethereum/svm.py", line 405, in execute_state
+    self._execute_pre_hook(op_code, global_state)
+  File "/home/ubuntu/private-mythril/mythril/laser/ethereum/svm.py", line 723, in _execute_pre_hook
+    hook(global_state)
+  File "/home/ubuntu/private-mythril/mythril/analysis/module/base.py", line 90, in execute
+    result = self._execute(target)
+  File "/home/ubuntu/private-mythril/mythril/analysis/module/modules/transaction_order_dependence.py", line 57, in _execute
+    potential_issues = self._analyze_state(state)
+  File "/home/ubuntu/private-mythril/mythril/analysis/module/modules/transaction_order_dependence.py", line 89, in _analyze_state
+    value = state.mstate.stack[-3]
+  File "/home/ubuntu/private-mythril/mythril/laser/ethereum/state/machine_state.py", line 76, in __getitem__
+    raise StackUnderflowException(
+mythril.laser.ethereum.evm_exceptions.StackUnderflowException: Trying to access a stack element which doesn't exist
+
+{"error": null, "issues": [], "success": true}
+79.46user 1.05system 1:19.30elapsed 101%CPU (0avgtext+0avgdata 157596maxresident)k
+56inputs+224outputs (0major+35235minor)pagefaults 0swaps

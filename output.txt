@@ -1,0 +1,7 @@
+README.md
+mythril_analysis
+output.txt
+oyente_analysis
+parallel_test.py
+0.00user 0.00system 0:00.00elapsed 100%CPU (0avgtext+0avgdata 2400maxresident)k
+0inputs+8outputs (0major+122minor)pagefaults 0swaps

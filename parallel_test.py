@@ -8,11 +8,11 @@ import fnmatch
 
 
 MYTHRIL = (
-    "time -v myth a {} --parallel-solving --execution-timeout 6 -o json > {} 2>&1"
+    "command time python3 /home/ubuntu/private-mythril/myth a {} --parallel-solving --execution-timeout 60 -o json > {} 2>&1"
 )
 OYENTE = "time -v /oyente/oyente/oyente.py -s {} > {} 2>&1"
 TOOL = "MYTHRIL"
-MAX_NO_OF_THREADS = 7
+MAX_NO_OF_THREADS = 14
 
 
 result_path_root = os.path.expanduser("~/results")

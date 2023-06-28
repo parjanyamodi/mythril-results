@@ -1,0 +1,4 @@
+{"error": null, "issues": [{"address": 413, "code": "for(uint i=0;i<numbers;i++) {\n            if(numElements == array.length) {\n                array.length += 1;\n            }\n            array[numElements++] = value;\n        }", "contract": "DosNumber", "description": "Potential denial-of-service if block gas limit is reached.\nA storage modification is executed in a loop.", "filename": "/home/ubuntu/smartbugs-curated/dataset/denial_of_service/dos_number.sol", "function": "insertNnumbers(uint256,uint256)", "lineno": 18, "max_gas_used": 215966, "min_gas_used": 55586, "severity": "Low", "sourceMap": "468:176", "swc-id": "128", "title": "Potential denial-of-service if block gas limit is reached", "tx_sequence": null}], "success": true}
+Command exited with non-zero status 1
+10.19user 0.89system 0:10.17elapsed 108%CPU (0avgtext+0avgdata 191132maxresident)k
+0inputs+24outputs (0major+45005minor)pagefaults 0swaps
