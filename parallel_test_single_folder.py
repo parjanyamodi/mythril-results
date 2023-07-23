@@ -5,10 +5,11 @@ import os
 import sys
 import threading
 import fnmatch
+import json
 
 
 MYTHRIL = (
-    "command time myth a {} --parallel-solving --execution-timeout 60 -o json > {} 2>&1"
+    "command time -v myth a {} --parallel-solving --execution-timeout 60 -o json > {} 2>&1"
 )
 MAX_NO_OF_THREADS = 1
 CONTRACTS_PER_THREAD = 10000
@@ -43,17 +44,6 @@ def analyse_contracts_in_chunk(chunk):
         analyse_contract(contract)
 
 
-def split_tasks(dataset_root):
-    files = [os.path.join(dataset_root, f) for f in os.listdir(dataset_root) if f.endswith(".sol")]
-    
-    targets = [files[i * CONTRACTS_PER_THREAD : (i+1) * CONTRACTS_PER_THREAD] for i in range(len(files) // CONTRACTS_PER_THREAD + 1)]
-
-    pool = ThreadPool(MAX_NO_OF_THREADS)
-    pool.map(analyse_contracts_in_chunk, targets)
-    pool.close()
-    pool.join()
-
-
 if __name__ == "__main__":
     if len(sys.argv) == 1:
         print("+" * 60)
@@ -86,7 +76,14 @@ no_of_threads: specifies the maximum number of threads running currently at any 
         print("The maximum number of threads will be limited to:", MAX_NO_OF_THREADS, end="\n\n")
         print("+" * 60, end="\n\n")
 
-        split_tasks(dataset_abs_path)
+        with open(dataset_abs_path) as fp:
+            to_analyse = json.load(fp)
+            files = [os.path.join("../sourcecode", to_analyse[key]) for key in to_analyse]
+
+            pool = ThreadPool(MAX_NO_OF_THREADS)
+            pool.map(analyse_contract, files)
+            pool.close()
+            pool.join()
 
         print()
         print("+" * 60, end="\n\n")
