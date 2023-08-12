@@ -46,9 +46,11 @@ def analyse_contracts_in_chunk(chunk):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) == 1:
+    if len(sys.argv) <= 3:
         print("+" * 60)
         print("No dataset folder specified!")
+        print("\t\t\t(or)")
+        print("No solc configuration specified!")
         print(
             """
 Usage: ./script.py <contracts_folder> [<solc_json_file>] [<results_folder>] [<no_of_threads>]
