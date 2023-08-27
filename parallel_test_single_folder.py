@@ -24,12 +24,19 @@ def analyse_contract(contract_file_full_path, solc_json_file=solc_json):
         return
 
     contract_file = os.path.basename(contract_file_full_path)
-    print(
-        "{}>> Analysing {}.....".format(threading.current_thread().name, contract_file)
-    )
 
     json_result_file = os.path.join(
         result_path_root, str(contract_file).replace(".sol", ".json")
+    )
+
+    if os.path.exists(json_result_file):
+        print(
+            "{}>> Skipping {}.....".format(threading.current_thread().name, contract_file)
+        )
+        return
+
+    print(
+        "{}>> Analysing {}.....".format(threading.current_thread().name, contract_file)
     )
     os.system(MYTHRIL.format(contract_file_full_path, solc_json_file, json_result_file))
 
